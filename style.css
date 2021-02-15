@@ -16,14 +16,34 @@
 
 body{ 
     background-color: #080606;
-
 }
+body:active .hand{
+    animation: punch 2s ease 0.1s 1 alternate;
+}
+.hand{
+    z-index: 3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
+    width: 0vh;
+    height: auto;
+}
+.hand img{
+    width: 100%;
+    height: auto;
+}
+@keyframes punch{
+    0%{width: 10vh;}
+    33%{width: 55vh;}
+    100%{width: 55vh;}
+}
 .head{
-    max-height: 75vh;
+    max-height: 70vh;
     max-width: 80vh;
-    min-height: 30vh;
-    min-width: 30vh;
+    min-height: 50vh;
+    min-width: 50vh;    
     height: 100%;
 
     display: flex;
@@ -69,7 +89,7 @@ body{
     transition: 0.6s;
 }
 .eyes:hover .eyelid{
-    height: 95%;
+    height: 92%;
 }
 .eye{
     position: absolute;
@@ -156,4 +176,11 @@ body{
     border-radius: 0 0 30% 30%;
     width: 90%;
     height: 50%;
+}
+footer{
+    background-color: #0a61bde8;
+    width: 50vh;
+    height:auto;
+    border-radius: 30%;
+    color: black;
 }
