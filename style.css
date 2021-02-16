@@ -28,7 +28,7 @@ body{
     width: 0vw;
     height: auto;
 }
-.hand img{
+.hand img, .easteregg img{
     width: 100%;
     height: auto;
 }
@@ -38,20 +38,32 @@ body{
     70%{width: 35vw;}
     100%{width: 35vw;}
 }
+.easteregg{
+    display:none;
+
+    z-index: 3;
+  
+    height: auto;
+    width: 90%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 .head{
 
     min-height: 50vh;    
     max-height: 75vh;
-
     min-width: 50vw;
     max-width: 75vh;
-    
     height: 100%;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     
+    position: relative;
 
     border: solid var(--detail-color2);
     background-color: var(--head-color);
